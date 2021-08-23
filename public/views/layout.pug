@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/css/normalize.css")
+        link(rel="stylesheet", href="/css/app.css")
+        title #{title}
+    body
+        header.barra 
+            h1 UpTask - Projects Administrator 
+            a(href='#') Log out 
+
+        main.contenedor 
+            aside.contenedor-proyectos 
+                .panel.crear-proyecto  
+                    a(href='/new-project' class='boton') New project 
+                        span +
+                .panel.lista-proyectos 
+                    h2 Projects
+                    ul#proyectos.proyectos 
+                        li 
+                            a(href='#') Diseño de tienda virtual  
+                        li 
+                            a(href='#') Diseño de nuevo blog 
+                        li 
+                            a(href='#') Diseño de logotipo
+        
+            block content 

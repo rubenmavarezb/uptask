@@ -1,0 +1,27 @@
+{
+  "name": "uptask",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:build": "tsc -w",
+    "start:run": "nodemon public/build/index.js",
+    "start": "concurrently npm:start:*",
+    "dev": "nodemon public/build/index.js"
+  },
+  "author": "Ruben Mavarez",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "concurrently": "^6.2.1",
+    "nodemon": "^2.0.12",
+    "ts-node": "^10.2.1",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.3.5"
+  }
+}

@@ -1,0 +1,16 @@
+extends layout 
+
+block content 
+    .contenido-principal 
+        h1 #{title}
+
+        if errors
+            each error in errors 
+                .alerta.error #{error.msg} 
+
+        form.agregar-proyecto(action='/new-project' method="POST")
+            .campo 
+                label(for="nombre") Project's name 
+                input(type="text" id="nombre" name="nombre" placeholder="Project's name")
+            .campo.enviar 
+                input(type="submit", value="Add" clas='boton')
