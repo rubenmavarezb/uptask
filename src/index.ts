@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded( { extended: true } ))
 
 app.set('PORT', 4000);
 app.set('view engine', 'pug');
-app.set('views', path.join(__dirname, '../public/views'));
+app.set('views', path.join(__dirname, '../views'));
 
 //routes
 const { projectsRouter } = routes;
